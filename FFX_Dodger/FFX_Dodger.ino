@@ -20,10 +20,12 @@ Serial.begin(9600);
 
 // Main program loop
 void loop() {
- //This line is used for calibrating the arduino to you tv
+ //This line is used for calibrating the arduino to your tv
  //It will print to your computer the current light level reading off of the LDR sensor
  //You can delete this line once you calibrate your code so you can see the dodge counter more easily
 Serial.println(analogRead(lightPin));
+ 
+ //Slight delay prevents the servo from trying to dodge the same lightning strike twice
 delay(200);
 
 // Checks to see if lightning has flashed 

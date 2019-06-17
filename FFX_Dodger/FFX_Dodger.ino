@@ -19,6 +19,8 @@ Serial.begin(9600);
 
 // Main program loop
 void loop() {
+ //This line is used for calibrating the arduino to you tv
+ //It will print to your computer the current light level reading off of the LDR sensor
 Serial.println(analogRead(lightPin));
 delay(200);
 

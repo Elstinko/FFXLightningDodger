@@ -21,10 +21,12 @@ Serial.begin(9600);
 void loop() {
  //This line is used for calibrating the arduino to you tv
  //It will print to your computer the current light level reading off of the LDR sensor
+ //You can delete this line once you calibrate your code so you can see the dodge counter more easily
 Serial.println(analogRead(lightPin));
 delay(200);
 
 // Checks to see if lightning has flashed 
+// The "400" is the number you will need to change that will trigegr the servo to dodge in the game
 if(analogRead(lightPin) >= 400){
   // The next two lines provide a counter of the number of lightning bolts currently dodged if you have the Arduino plugged into a PC
   count++;
